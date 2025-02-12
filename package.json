@@ -5,15 +5,16 @@
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
+    "start": "react-router build && python3 -m http.server 8080 --bind 127.0.0.1 --directory ./build/client/",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
-    "@mui/icons-material": "^6.4.3",
-    "@mui/material": "^6.4.3",
+    "@mui/icons-material": "next",
+    "@mui/material": "next",
     "@react-router/node": "^7.1.5",
     "@react-router/serve": "^7.1.5",
     "isbot": "^5.1.17",
